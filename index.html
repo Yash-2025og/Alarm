@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock with Alarms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Digital Clock with Alarms</h1>
+      <button id="darkModeToggle">Toggle Theme</button>
+    </header>
+    <div class="clock">
+      <h2 id="time"></h2>
+      <p id="date"></p>
+    </div>
+    <div class="alarm-section">
+      <h3>Set Alarm</h3>
+      <div class="alarm-form">
+        <input type="time" id="alarmTime" required>
+        <input type="text" id="alarmLabel" placeholder="Alarm Label ">
+        <button id="setAlarmBtn">Set Alarm</button>
+      </div>
+      <ul id="alarmList"></ul>
+    </div>
+  </div>
+  <audio id="alarmSound" src="https://cloud-av82wzase-hack-club-bot.vercel.app/0whatsapp_audio_2025-01-30_at_11.02.29_192c1778_audio.mp4"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

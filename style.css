@@ -1,0 +1,195 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2d3436, #1e272e);
+  color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  background: linear-gradient(145deg, #2f3640, #353b48);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 15px rgba(255, 255, 255, 0.05);
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ff9f43;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff9f43, #e84118);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0px 5px 10px rgba(255, 159, 67, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #e84118, #ff9f43);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Clock Styles */
+.clock {
+  background: linear-gradient(145deg, #353b48, #2f3640);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.05);
+}
+
+#time {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  color: #f5f5f5;
+  text-shadow: 0px 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+#date {
+  font-size: 1.2rem;
+  color: #dcdde1;
+  margin-top: 5px;
+}
+
+/* Alarm Section */
+.alarm-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.alarm-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+  text-shadow: 0px 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+.alarm-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="time"],
+input[type="text"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: calc(50% - 10px);
+  background: #2f3640;
+  color: #f5f5f5;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+input[type="time"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  background: #353b48;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#alarmList {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#alarmList li {
+  background: linear-gradient(145deg, #353b48, #2f3640);
+  margin: 8px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#alarmList button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#alarmList button.snooze-btn {
+  background: #eccc68;
+  color: black;
+}
+
+#alarmList button.delete-btn {
+  background: #ff6b6b;
+  color: white;
+}
+
+#alarmList button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+#alarmList button:active {
+  transform: scale(1);
+}
+
+/* Scrollbar Customization */
+#alarmList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#alarmList::-webkit-scrollbar-thumb {
+  background: #7f8fa6;
+  border-radius: 4px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1e272e;
+  color: #dcdde1;
+}
+
+.dark-mode input {
+  background-color: #353b48;
+  color: #dcdde1;
+}
+
+.dark-mode button {
+  background: linear-gradient(135deg, #9c88ff, #8c7ae6);
+}
+
+.dark-mode #alarmList li {
+  background: #353b48;
+}
